@@ -24,6 +24,7 @@ insert into employee_payroll(EmployeeName,BasicPay) values('Joe',30000)
 insert into employee_payroll(EmployeeName,BasicPay) values('Gita',15000)
 
 select * from employee_payroll
+select EmployeeName,BasicPay from employee_payroll
 
 SELECT name, database_id, create_date  
 FROM sys.databases;  
