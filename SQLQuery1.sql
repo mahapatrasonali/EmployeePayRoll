@@ -17,14 +17,15 @@ StartDate Date,
 City varchar(255),
 Country varchar(255),
 )
-insert into employee_payroll(EmployeeName,BasicPay) values('Jon',20000)
-insert into employee_payroll(EmployeeName,BasicPay) values('Sita',50000)
-insert into employee_payroll(EmployeeName,BasicPay) values('Rita',45000)
-insert into employee_payroll(EmployeeName,BasicPay) values('Joe',30000)
-insert into employee_payroll(EmployeeName,BasicPay) values('Gita',15000)
+insert into employee_payroll(EmployeeName,BasicPay,StartDate) values('Jon',20000,2011-09-10)
+insert into employee_payroll(EmployeeName,BasicPay,StartDate) values('Sita',50000,2020-08-23)
+insert into employee_payroll(EmployeeName,BasicPay,StartDate) values('Rita',45000,2017-03-12)
+insert into employee_payroll(EmployeeName,BasicPay,StartDate) values('Joe',30000,2019-07-23)
+insert into employee_payroll(EmployeeName,BasicPay,StartDate) values('Gita',15000,2021-08-16)
 
 select * from employee_payroll
 select EmployeeName,BasicPay from employee_payroll
+select EmployeeName,BasicPay from employee_payroll where StartDate BETWEEN CAST('2018-01-01' as Date) AND Date(Now());
 
 SELECT name, database_id, create_date  
 FROM sys.databases;  
